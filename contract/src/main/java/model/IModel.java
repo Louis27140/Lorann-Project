@@ -20,6 +20,8 @@ public interface IModel {
 	
 	IMobile getDoor();
 	
+	void setLevelID(int levelID);
+	
 	int getLevelID();
 	
 	boolean hasCharacterWon();

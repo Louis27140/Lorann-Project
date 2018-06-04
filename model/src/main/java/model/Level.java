@@ -9,6 +9,7 @@ import java.util.Observable;
 import model.dao.LorannDAO;
 import model.element.Element;
 import model.element.mobile.auto.FirstMonster;
+import model.element.mobile.auto.SecondMonster;
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;
@@ -79,28 +80,32 @@ public class Level extends Observable implements ILevel {
 	private void loadLevel(int level) throws SQLException, IOException {
 		String levelText = LorannDAO.chooseLevel(level);
 		this.onTheLevel = new IElement[this.getWidth()][this.getHeight()];
-		String[] levelArray = levelText.split(",");
+		String[] levelArray = levelText.split(";");
 		
 		for(int y = 0; y < 12; y++) {
 			for(int x = 0; x < 20; x++) {
 				switch(levelArray[y].toCharArray()[x]) {
-					case 'L':
+					case '3':
 						this.setCharacterPosition(new Point(x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
-					case 'A':
+					case '5':
 						this.purses.add(new Purse(x, y, this));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
-					case 'B':
+					case '8':
 						this.energyBall = new EnergyBall(x, y, this);
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
-					case 'S':
+					case '9':
+						this.monsters.add(new SecondMonster(this, x, y));
+						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
+						break;
+					case '6':
 						this.door = new Door(x, y, this);
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
-					case 'M':
+					case '4':
 						this.monsters.add(new FirstMonster(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;

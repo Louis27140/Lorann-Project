@@ -16,7 +16,7 @@ import model.element.mobile.collectible.Purse;
  */
 public final class ModelFacade implements IModel {
 	
-	private int levelID;
+	private int LevelID;
 	
 	private ILevel level;
 	private IMobile character;
@@ -46,7 +46,7 @@ public final class ModelFacade implements IModel {
         
         for(int i = 0; i < monsters.length; i++) {
         	switch(this.getLevel().getMonsters()[i].getSprite().getConsoleImage()) {
-	        	case 'M':
+	        	case '4':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
 	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
@@ -101,20 +101,18 @@ public final class ModelFacade implements IModel {
 	public IMobile getDoor() {
 		return this.door;
 	}
-	
-	public int getLevelID() {
-		return this.levelID;
-	}
-	
-	public void setLevelID(int levelID) {
-		this.levelID = levelID;
-	}
-	
-	
 
 	@Override
 	public boolean hasCharacterWon() {
 		return ((MyCharacter)this.getMyCharacter()).hasWon();
+	}
+
+	public int getLevelID() {
+		return LevelID;
+	}
+
+	public void setLevelID(int levelID) {
+		this.LevelID = levelID;
 	}
 	
 }

@@ -9,8 +9,8 @@ import model.element.mobile.Mobile;
 
 public class EnergyBall extends Mobile {
 
-	private static Sprite ballSprite = new Sprite('B', "crystal_ball");
-	private static Sprite collected = new Sprite('B', "floor");
+	private static Sprite ballSprite = new Sprite('8', "crystal_ball");
+	private static Sprite collected = new Sprite('8', "floor");
 	
 	public EnergyBall(int x, int y, ILevel level) throws IOException {
 		super(ballSprite, Permeability.COLLECTIBLE, level, x, y);

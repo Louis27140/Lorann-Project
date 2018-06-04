@@ -86,10 +86,12 @@ public class ControllerFacade implements IController, IOrderPerformer {
         	}
         	
         }
-        if(this.getModel().hasCharacterWon())
-        	this.getView().displayMessage("Level " + model.getLevelID() + "Finished");
-        else
+        if(this.getModel().hasCharacterWon()) {
+        	this.getView().displayMessage("Level " + model.getLevelID() + " Finished");   
+        }
+        else {
         	this.getView().displayMessage("Game Over");
+        }
     }
 
     /**

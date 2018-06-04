@@ -50,6 +50,18 @@ public final class ModelFacade implements IModel {
 	        		monsters[i] = this.getLevel().getMonsters()[i];
 	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
+	        	case '9':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
+	        	case 'A':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
+	        	case 'B':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
         	}
         }
         

@@ -9,7 +9,9 @@ import java.util.Observable;
 import model.dao.LorannDAO;
 import model.element.Element;
 import model.element.mobile.auto.FirstMonster;
+import model.element.mobile.auto.FourthMonster;
 import model.element.mobile.auto.SecondMonster;
+import model.element.mobile.auto.ThirdMonster;
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;
@@ -107,6 +109,14 @@ public class Level extends Observable implements ILevel {
 						break;
 					case '4':
 						this.monsters.add(new FirstMonster(this, x, y));
+						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
+						break;
+					case 'A':
+						this.monsters.add(new ThirdMonster(this, x, y));
+						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
+						break;
+					case 'B':
+						this.monsters.add(new FourthMonster(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					default: 

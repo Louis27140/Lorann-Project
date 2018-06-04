@@ -9,9 +9,8 @@ import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;
 
 /**
- * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
+ * <h1>The Class ModelFacade provides a facade for the Model component.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.0
  */
@@ -28,6 +27,9 @@ public final class ModelFacade implements IModel {
 	
     /**
      * Instantiates a new model facade.
+     * 
+     * 
+     * @param level
      * @throws SQLException 
      * @throws IOException 
      */
@@ -77,52 +79,98 @@ public final class ModelFacade implements IModel {
 	public ILevel getLevel() {
 		return this.level;
 	}
-
+/**
+ * Gets the character.
+ * @return character
+ */
 	@Override
 	public IMobile getMyCharacter() {
 		return this.character;
 	}
-	
+	/**
+	 * Sets the level.
+	 * @param level
+	 */
 	private void setLevel(ILevel level) {
 		this.level = level;
 	}
+	/**
+	 * Sets the character.
+	 * @param character
+	 */
 
 	private void setCharacter(IMobile character) {
 		this.character = character;
 	}
-
+	/**
+	 * Gets the purses.
+	 * 
+	 * @return purses
+	 */
 	public IMobile[] getPurses() {
 		return purses;
 	}
+	/**
+	 * Sets the purses.
+	 * @param purses
+	 */
 
 	public void setPurses(IMobile[] purses) {
 		this.purses = purses;
 	}
+	/**
+	 * Gets the monsters.
+	 * @return monsters
+	 */
 
 	public IMobile[] getMonsters() {
 		return monsters;
 	}
+	/**
+	 * Sets the monsters.
+	 * @param monsters
+	 */
 
 	public void setMonsters(IMobile[] monsters) {
 		this.monsters = monsters;
 	}
+	/**
+	 * Gets the energy ball.
+	 * @return energyBall
+	 */
 
 	public IMobile getEnergyBall() {
 		return this.energyBall;
 	}
+	/**
+	 * Gets the door.
+	 * @return door
+	 */
 	
 	public IMobile getDoor() {
 		return this.door;
 	}
+	/**
+	 * Gets if the character has won.
+	 * @return hasWon
+	 */
 
 	@Override
 	public boolean hasCharacterWon() {
 		return ((MyCharacter)this.getMyCharacter()).hasWon();
 	}
+	/**
+	 * Gets the level ID.
+	 * @return LevelID
+	 */
 
 	public int getLevelID() {
 		return LevelID;
 	}
+	/**
+	 * Sets the level ID
+	 * @param levelID
+	 */
 
 	public void setLevelID(int levelID) {
 		this.LevelID = levelID;

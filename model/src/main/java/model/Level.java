@@ -9,14 +9,20 @@ import java.util.Observable;
 import model.dao.LorannDAO;
 import model.element.Element;
 import model.element.mobile.auto.FirstMonster;
-import model.element.mobile.auto.FourthMonster;
 import model.element.mobile.auto.SecondMonster;
 import model.element.mobile.auto.ThirdMonster;
+import model.element.mobile.auto.FourthMonster;
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;
 import model.element.motionless.MotionlessElementFactory;
-
+/**
+ * <h1>The Level Class</h1>
+ * 
+ * 
+ * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
+ *
+ */
 public class Level extends Observable implements ILevel {
 	
 	private final int width = 20;
@@ -87,14 +93,26 @@ public class Level extends Observable implements ILevel {
 		this.notifyObservers();
 
 	}
-	
+	/**
+	 * <h1>The loadLevel method.</h1>
+	 * 
+	 * This method reads the levelText and processes it to generate the maps.
+	 * <p>
+	 * 
+	 * The algorithm consists in two imbricate "for" loops browsing the height and width. 
+	 * <br> Inside is a "switch" condition calling the creation of the right item depending on the text input.
+	 * 
+	 * @param level
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	private void loadLevel(int level) throws SQLException, IOException {
 		String levelText = LorannDAO.chooseLevel(level);
 		this.onTheLevel = new IElement[this.getWidth()][this.getHeight()];
 		String[] levelArray = levelText.split(";");
 		
-		for(int y = 0; y < 12; y++) {
-			for(int x = 0; x < 20; x++) {
+		for(int y = 0; y < height; y++) {
+			for(int x = 0; x < width; x++) {
 				switch(levelArray[y].toCharArray()[x]) {
 					case '3':
 						this.setCharacterPosition(new Point(x, y));
@@ -147,11 +165,17 @@ public class Level extends Observable implements ILevel {
 			return false;
 		}
 	}
-	
+	/**
+	 * Gets the character position
+	 * @return getCharacterPosition
+	 */
 	public Point getCharacterPosition() {
 		return this.characterPosition;
 	}
-	
+	/**
+	 * Sets the character position
+	 * @param position
+	 */
 	private void setCharacterPosition(Point position) {
 		this.characterPosition = position;
 	}

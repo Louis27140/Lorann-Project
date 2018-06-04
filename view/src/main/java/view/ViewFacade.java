@@ -23,6 +23,7 @@ import model.Sprite;
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.0
  */
 public class ViewFacade implements IView, KeyListener, Runnable {

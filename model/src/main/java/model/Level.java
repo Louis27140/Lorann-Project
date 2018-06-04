@@ -46,12 +46,21 @@ public class Level extends Observable implements ILevel {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Gets the width.
+	 * 
+	 * @return the width
+	 */
 	@Override
 	public int getWidth() {
 		return this.width;
 	}
 
+	/**
+	 * Gets the Height.
+	 * @return the height
+	 */
 	@Override
 	public int getHeight() {
 		return this.height;

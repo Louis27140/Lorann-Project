@@ -9,6 +9,7 @@ import java.awt.Image;
  * </p>
  *
  * @author Anne-Emilie DIET
+ * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.1
  * @see Image
  */

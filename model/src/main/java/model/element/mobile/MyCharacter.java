@@ -10,14 +10,14 @@ import model.Sprite;
 
 public class MyCharacter extends Mobile{
 	
-	private static Sprite lorann_b = new Sprite('L', "lorann_b");
-	private static Sprite lorann_bl = new Sprite('L' ,"lorann_bl");
-	private static Sprite lorann_br = new Sprite('L' ,"lorann_br");
-	private static Sprite lorann_l = new Sprite('L' ,"lorann_l");
-	private static Sprite lorann_r = new Sprite('L' ,"lorann_r");
-	private static Sprite lorann_u = new Sprite('L' ,"lorann_u");
-	private static Sprite lorann_ul = new Sprite('L' ,"lorann_ul");
-	private static Sprite lorann_ur = new Sprite('L' ,"lorann_ur");
+	private static Sprite lorann_b = new Sprite('3', "lorann_b");
+	private static Sprite lorann_bl = new Sprite('3' ,"lorann_bl");
+	private static Sprite lorann_br = new Sprite('3' ,"lorann_br");
+	private static Sprite lorann_l = new Sprite('3' ,"lorann_l");
+	private static Sprite lorann_r = new Sprite('3' ,"lorann_r");
+	private static Sprite lorann_u = new Sprite('3' ,"lorann_u");
+	private static Sprite lorann_ul = new Sprite('3' ,"lorann_ul");
+	private static Sprite lorann_ur = new Sprite('3' ,"lorann_ur");
 	
 	private ArrayList<IMobile> purses;
 	private ArrayList<IMobile> monsters;
@@ -144,6 +144,8 @@ public class MyCharacter extends Mobile{
 		if(door.getX() == newX && door.getY() == newY) {
 			if(hasTheKey) {
 				this.won = true;
+				
+			}else {
 				this.die();
 			}
 			return true;

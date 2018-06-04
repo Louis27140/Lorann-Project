@@ -9,8 +9,8 @@ import model.element.mobile.Mobile;
 
 public class Purse extends Mobile {
 
-	private static Sprite purseSprite = new Sprite('A', "purse");
-	private static Sprite collected = new Sprite('A', "floor");
+	private static Sprite purseSprite = new Sprite('5', "purse");
+	private static Sprite collected = new Sprite('5', "floor");
 	
 	private static int points = 10;
 	

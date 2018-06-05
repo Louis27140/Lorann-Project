@@ -8,10 +8,12 @@ import java.util.Observable;
 
 import model.dao.LorannDAO;
 import model.element.Element;
-import model.element.mobile.auto.FirstMonster;
-import model.element.mobile.auto.SecondMonster;
-import model.element.mobile.auto.ThirdMonster;
-import model.element.mobile.auto.FourthMonster;
+
+import model.element.mobile.auto.Monster_1;
+import model.element.mobile.auto.Monster_4;
+import model.element.mobile.auto.Monster_2;
+import model.element.mobile.auto.Monster_3;
+
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;
@@ -109,7 +111,7 @@ public class Level extends Observable implements ILevel {
 	private void loadLevel(int level) throws SQLException, IOException {
 		String levelText = LorannDAO.chooseLevel(level);
 		this.onTheLevel = new IElement[this.getWidth()][this.getHeight()];
-		String[] levelArray = levelText.split(";");
+		String[] levelArray = levelText.split("\n");
 		
 		for(int y = 0; y < height; y++) {
 			for(int x = 0; x < width; x++) {
@@ -127,7 +129,7 @@ public class Level extends Observable implements ILevel {
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case '9':
-						this.monsters.add(new SecondMonster(this, x, y));
+						this.monsters.add(new Monster_2(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case '6':
@@ -135,15 +137,15 @@ public class Level extends Observable implements ILevel {
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case '4':
-						this.monsters.add(new FirstMonster(this, x, y));
+						this.monsters.add(new Monster_1(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case 'A':
-						this.monsters.add(new ThirdMonster(this, x, y));
+						this.monsters.add(new Monster_3(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case 'B':
-						this.monsters.add(new FourthMonster(this, x, y));
+						this.monsters.add(new Monster_4(this, x, y));
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					default: 

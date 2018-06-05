@@ -3,7 +3,7 @@ package model;
 import java.io.IOException;
 import java.sql.SQLException;
 import model.element.mobile.MyCharacter;
-import model.element.mobile.auto.FirstMonster;
+import model.element.mobile.auto.Monster_1;
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
 import model.element.mobile.collectible.Purse;

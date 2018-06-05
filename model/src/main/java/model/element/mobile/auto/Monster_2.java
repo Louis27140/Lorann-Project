@@ -4,12 +4,13 @@ import model.ILevel;
 import model.Permeability;
 import model.Sprite;
 
-public class ThirdMonster extends Monster {
-private static Sprite sprite = new Sprite('A', "monster_3");
+public class Monster_2 extends Monster{
+	
+	private static Sprite sprite = new Sprite('9', "monster_2");
 	
 	public boolean goingUp = true;
 
-	public ThirdMonster(ILevel level, int x, int y) {
+	public Monster_2(ILevel level, int x, int y) {
 		super(sprite, level, x, y);
 	}
 
@@ -56,4 +57,5 @@ private static Sprite sprite = new Sprite('A', "monster_3");
 		}
 		return false;
 	}
+
 }

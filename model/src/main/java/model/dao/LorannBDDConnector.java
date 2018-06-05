@@ -11,7 +11,7 @@ import java.sql.Statement;
  * 
  * Establishes the connection between the program and the database.
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * 
  * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.0
  */

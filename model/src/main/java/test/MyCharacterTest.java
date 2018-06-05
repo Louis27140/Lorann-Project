@@ -9,10 +9,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import model.ILevel;
-import model.element.mobile.MyCharacter;
+import model.element.mobile.Lorann;
 
 public class MyCharacterTest {
-	private MyCharacter character;
+	private Lorann character;
 	private ILevel level;
 
 	@BeforeClass
@@ -25,7 +25,7 @@ public class MyCharacterTest {
 
 	@Before
 	public void setUp() throws Exception {
-		this.character = new MyCharacter(10, 10, level);
+		this.character = new Lorann(10, 10, level);
 	}
 
 	@After

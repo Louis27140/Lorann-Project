@@ -8,7 +8,7 @@ public abstract class MotionlessElementFactory {
 	
 	private static final HorizontalWall horizontalwall = new HorizontalWall();
 	
-	private static final OpenedDoor     openeddoor     = new OpenedDoor();
+	private static final OpenedGate     openeddoor     = new OpenedGate();
 	
 	private static final VerticalWall   verticalwall   = new VerticalWall();
 	

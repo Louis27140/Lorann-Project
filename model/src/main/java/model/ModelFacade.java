@@ -2,10 +2,10 @@ package model;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import model.element.mobile.MyCharacter;
+import model.element.mobile.Lorann;
 import model.element.mobile.auto.Monster_1;
-import model.element.mobile.collectible.Door;
-import model.element.mobile.collectible.EnergyBall;
+import model.element.mobile.collectible.Gate;
+import model.element.mobile.collectible.CrystalEnergy;
 import model.element.mobile.collectible.Purse;
 
 /**
@@ -36,14 +36,14 @@ public final class ModelFacade implements IModel {
     public ModelFacade(int level) throws SQLException, IOException {
         super();
         this.setLevel(new Level(level));
-        this.setCharacter(new MyCharacter((int)this.level.getCharacterPosition().getX(), (int)this.level.getCharacterPosition().getY(), this.level));
+        this.setCharacter(new Lorann((int)this.level.getCharacterPosition().getX(), (int)this.level.getCharacterPosition().getY(), this.level));
 
         purses = new IMobile[this.getLevel().getPurses().length];
         monsters = new IMobile[this.getLevel().getMonsters().length];
         
         for(int i = 0; i < purses.length; i++) {
         	purses[i] = this.getLevel().getPurses()[i];
-        	((MyCharacter)this.getMyCharacter()).addPurse(purses[i]);
+        	((Lorann)this.getMyCharacter()).addPurse(purses[i]);
         }
         
         
@@ -51,28 +51,28 @@ public final class ModelFacade implements IModel {
         	switch(this.getLevel().getMonsters()[i].getSprite().getConsoleImage()) {
 	        	case '4':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
-	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	            	((Lorann)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
 	        	case '9':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
-	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	            	((Lorann)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
 	        	case 'A':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
-	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	            	((Lorann)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
 	        	case 'B':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
-	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	            	((Lorann)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
         	}
         }
         
         energyBall = this.getLevel().getEnergyBall();
-        ((MyCharacter)this.getMyCharacter()).addEnergyBall(energyBall);
+        ((Lorann)this.getMyCharacter()).addEnergyBall(energyBall);
         
         door = this.getLevel().getDoor();
-        ((MyCharacter)this.getMyCharacter()).addDoor(door);
+        ((Lorann)this.getMyCharacter()).addDoor(door);
     }
     
 	@Override
@@ -157,7 +157,7 @@ public final class ModelFacade implements IModel {
 
 	@Override
 	public boolean hasCharacterWon() {
-		return ((MyCharacter)this.getMyCharacter()).hasWon();
+		return ((Lorann)this.getMyCharacter()).hasWon();
 	}
 	/**
 	 * Gets the level ID.

@@ -13,14 +13,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Menu {
+public class Launcher {
 	
 	public int level;
 	public boolean choix = false;
 	
-	public Menu() {
+	public Launcher() {
 
 		JFrame frame = new JFrame("Menu Lorann");
+		JLabel text = new JLabel("Made by Louis CHOCHOY , Thomas ISAAC ,");
+		JLabel text1 = new JLabel("Valentin CASEN and Adrien Lalisse");
 		
 		
 		JPanel panel = new JPanel();
@@ -53,6 +55,8 @@ public class Menu {
 		panel.add(label1);
 		panel.add(niveau);
 		panel.add(button);
+		panel.add(text);
+		panel.add(text1);
 		
 		frame.add(panel);
 		frame.setSize(360, 320);

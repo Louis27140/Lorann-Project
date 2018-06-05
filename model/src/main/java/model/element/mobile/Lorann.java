@@ -8,7 +8,7 @@ import model.IMobile;
 import model.Permeability;
 import model.Sprite;
 
-public class MyCharacter extends Mobile{
+public class Lorann extends Mobile{
 	
 	private static Sprite lorann_b = new Sprite('3', "lorann_b");
 	private static Sprite lorann_bl = new Sprite('3' ,"lorann_bl");
@@ -31,7 +31,7 @@ public class MyCharacter extends Mobile{
 	
 	private static Sprite[] sprites;
 	
-	public MyCharacter(int x, int y, ILevel level) throws IOException {
+	public Lorann(int x, int y, ILevel level) throws IOException {
 		super(lorann_r, Permeability.BLOCKING, level);
 		
 		sprites = new Sprite[8];

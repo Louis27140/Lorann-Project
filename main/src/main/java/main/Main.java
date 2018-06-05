@@ -29,12 +29,12 @@ public abstract class Main {
      */
     public static void main(final String[] args) throws InterruptedException, IOException, SQLException {
 
-    	final Menu menu = new Menu();
-    	while (menu.choix == false) {
+    	final Launcher launcher = new Launcher();
+    	while (launcher.choix == false) {
 			Thread.sleep(10);
 		}
-    	final IModel model = new ModelFacade(menu.level);
-    	model.setLevelID(menu.level);
+    	final IModel model = new ModelFacade(launcher.level);
+    	model.setLevelID(launcher.level);
     	final ViewFacade view = new ViewFacade(model.getLevel(), model.getMyCharacter(), model.getPurses(), model.getMonsters(), model.getEnergyBall(), model.getDoor());
         final IController controller = new ControllerFacade(view, model);
         

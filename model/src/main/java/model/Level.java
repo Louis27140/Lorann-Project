@@ -14,8 +14,13 @@ import model.element.mobile.auto.Monster_4;
 import model.element.mobile.auto.Monster_2;
 import model.element.mobile.auto.Monster_3;
 
+<<<<<<< HEAD
 import model.element.mobile.collectible.Gate;
 import model.element.mobile.collectible.CrystalEnergy;
+=======
+import model.element.mobile.collectible.Door;
+import model.element.mobile.collectible.EnergyBall;
+>>>>>>> master
 import model.element.mobile.collectible.Purse;
 import model.element.motionless.MotionlessElementFactory;
 /**

@@ -83,7 +83,7 @@ public class Lorann extends Mobile{
 	public void specialCase(int x, int y) {
 		if(isHit(this.getX(), this.getY())) {this.die();}
 		else if(this.isOnKey(x, this.getY())) {}
-		else if(this.isOnDoor(x, this.getY())) {}
+		else if(this.isOnDoor(x, this.getY())) {this.hasWon();}
 		else if(this.isHit(x, this.getY())) {}
 		else if(this.isOnPurse(x, this.getY())) {}
 	}
@@ -144,7 +144,7 @@ public class Lorann extends Mobile{
 		if(door.getX() == newX && door.getY() == newY) {
 			if(hasTheKey) {
 				this.won = true;
-				
+				this.die();
 			}else {
 				this.die();
 			}

@@ -93,6 +93,7 @@ public class Lorann extends Mobile{
 		super.moveLeft();
 		specialCase(this.getX(), this.getY());
 		this.setSprite(lorann_bl);
+		this.setHasMoved();
 	}
 	
 	@Override
@@ -100,6 +101,7 @@ public class Lorann extends Mobile{
 		super.moveRight();
 		specialCase(this.getX(), this.getY());
 		this.setSprite(lorann_ur);
+		this.setHasMoved();
 	}
 	
 	@Override
@@ -107,6 +109,7 @@ public class Lorann extends Mobile{
 		super.moveUp();
 		specialCase(this.getX(), this.getY());
 		this.setSprite(lorann_ul);
+		this.setHasMoved();
 	}
 	
 	@Override
@@ -114,6 +117,7 @@ public class Lorann extends Mobile{
 		super.moveDown();
 		specialCase(this.getX(), this.getY());
 		this.setSprite(lorann_br);
+		this.setHasMoved();
 	}
 	
 	public boolean isOnPurse(int newX, int newY) {

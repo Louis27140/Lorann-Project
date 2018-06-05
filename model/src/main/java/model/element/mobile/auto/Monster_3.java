@@ -42,8 +42,7 @@ private static Sprite sprite = new Sprite('A', "monster_3");
 	
 	public boolean goUpRight() {
 		if(this.getLevel().getOnTheLevelXY(this.getX() + 1, this.getY() - 1).getPermeability() != Permeability.BLOCKING) {
-			this.moveUp();
-			this.moveRight();
+			this.moveUpRight();
 			return true;
 		}
 		return false;
@@ -52,8 +51,7 @@ private static Sprite sprite = new Sprite('A', "monster_3");
 	
 	public boolean goDownLeft() {
 		if(this.getLevel().getOnTheLevelXY(this.getX() - 1, this.getY() + 1).getPermeability() != Permeability.BLOCKING) {
-			this.moveDown();
-			this.moveLeft();
+			this.moveDownLeft();
 			return true;
 		}
 		return false;

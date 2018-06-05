@@ -77,20 +77,16 @@ public class ControllerFacade implements IController, IOrderPerformer {
         			this.getModel().getMyCharacter().shoot();
         			break;
         		case KeyEvent.VK_SHIFT:
-        			this.getModel().getMyCharacter().moveUp();
-        			this.getModel().getMyCharacter().moveLeft();
+        			this.getModel().getMyCharacter().moveUpLeft();
         			break;
         		case KeyEvent.VK_NUMPAD1:
-        			this.getModel().getMyCharacter().moveUp();
-        			this.getModel().getMyCharacter().moveRight();
+        			this.getModel().getMyCharacter().moveUpRight();
         			break;
         		case KeyEvent.VK_CONTROL:
-        			this.getModel().getMyCharacter().moveDown();
-        			this.getModel().getMyCharacter().moveLeft();
+        			this.getModel().getMyCharacter().moveDownLeft();
         			break;
         		case KeyEvent.VK_NUMPAD0:
-        			this.getModel().getMyCharacter().moveDown();
-        			this.getModel().getMyCharacter().moveRight();
+        			this.getModel().getMyCharacter().moveDownRight();
         			break;
         		default:
         			this.getModel().getMyCharacter().doNothing();

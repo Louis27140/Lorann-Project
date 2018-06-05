@@ -82,6 +82,46 @@ public abstract class Mobile extends Element implements IMobile {
 		this.lastY = 0;
 	}
 	/**
+	 * Moves the character to the Up and the right by incrementing X and decrementing Y.
+	 */
+	@Override 
+	public void moveUpRight() {
+		this.setX(this.getX() + 1);
+		this.setY(getY() - 1);
+		this.lastX = 1;
+		this.lastY = -1;
+	}
+	/**
+	 * Moves the character to the Up and the left by decrementing X and Y.
+	 */
+	@Override
+	public void moveUpLeft() {
+		this.setX(this.getX() - 1);
+		this.setY(getY() - 1);
+		this.lastX = -1;
+		this.lastY = -1;
+	}
+	/**
+	 * Moves the character to the Up and the left by incrementing X and Y.
+	 */
+	@Override
+	public void moveDownRight() {
+		this.setX(this.getX() + 1);
+		this.setY(getY() + 1);
+		this.lastX = 1;
+		this.lastY = 1;
+	}
+	/**
+	 * Moves the character to the Up and the right by decrementing X and incrementing Y.
+	 */
+	@Override
+	public void moveDownLeft() {
+		this.setX(this.getX() - 1);
+		this.setY(getY() + 1);
+		this.lastX = -1;
+		this.lastY = 1;
+	}
+	/**
 	 * Indicates the character has moved for the update.
 	 */
 	public void setHasMoved() {

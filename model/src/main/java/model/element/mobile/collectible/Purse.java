@@ -12,7 +12,7 @@ public class Purse extends Mobile {
 	private static Sprite purseSprite = new Sprite('5', "purse");
 	private static Sprite collected = new Sprite('5', "floor");
 	
-	private static int points = 10;
+	private static int points = 100;
 	
 	public Purse(int x, int y, ILevel level) throws IOException {
 		super(purseSprite, Permeability.COLLECTIBLE, level, x, y);

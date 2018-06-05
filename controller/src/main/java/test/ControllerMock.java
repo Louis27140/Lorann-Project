@@ -56,7 +56,7 @@ public class ControllerMock implements IController, IOrderPerformer{
 	    /**
 	     * Stock the order.
 	     *
-	     * @return the model
+	     * @param userOrder
 	     */
 	    public void performOrder(KeyEvent userOrder) {
 	    	this.setStackOrder(userOrder);
@@ -65,7 +65,7 @@ public class ControllerMock implements IController, IOrderPerformer{
 	    /**
 	     * Gets the order.
 	     *
-	     * @return the model
+	     * @return stackOrder
 	     */
 		public KeyEvent getStackOrder() {
 			return stackOrder;
@@ -74,7 +74,7 @@ public class ControllerMock implements IController, IOrderPerformer{
 		/**
 	     * Set the order.
 	     *
-	     * @return the model
+	     * @param stackOrder
 	     */
 		public void setStackOrder(KeyEvent stackOrder) {
 			this.stackOrder = stackOrder;
@@ -83,7 +83,6 @@ public class ControllerMock implements IController, IOrderPerformer{
 		/**
 	     * Gets the Order performer.
 	     *
-	     * @return the model
 	     */
 		public IOrderPerformer getOrderPerformer() {
 			return this;

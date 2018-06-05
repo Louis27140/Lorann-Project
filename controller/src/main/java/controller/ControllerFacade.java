@@ -112,9 +112,9 @@ public class ControllerFacade implements IController, IOrderPerformer {
     }
     
     /**
-     * Stock the order.
+     * Performs the order.
      *
-     * @return the model
+     *@param userOrder
      */
     public void performOrder(KeyEvent userOrder) {
     	this.setStackOrder(userOrder);
@@ -130,9 +130,9 @@ public class ControllerFacade implements IController, IOrderPerformer {
 	}
 
 	/**
-     * Set the order.
+     * Sets the stack order.
      *
-     * @return the model
+     * @param stackOrder
      */
 	public void setStackOrder(KeyEvent stackOrder) {
 		this.stackOrder = stackOrder;

@@ -1,0 +1,12 @@
+controller
+main
+model
+model.dao
+model.element
+model.element.mobile
+model.element.mobile.auto
+model.element.mobile.collectible
+model.element.motionless
+showboard
+test
+view

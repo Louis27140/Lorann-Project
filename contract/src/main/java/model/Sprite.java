@@ -122,8 +122,7 @@ public class Sprite {
     /**
      * Get the console image.
      *
-     * @param isImageLoaded
-     *            the new image loaded
+     * @return consoleImage
      */
 	public char getConsoleImage() {
 		return this.consoleImage;
@@ -132,8 +131,7 @@ public class Sprite {
 	/**
      * Sets the console image.
      *
-     * @param isImageLoaded
-     *            the new image loaded
+     * @param consoleImage
      */
 	public void setConsoleImage(char consoleImage) {
 		this.consoleImage = consoleImage;

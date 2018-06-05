@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public abstract class LorannDAO extends AbstractDAO{
 
-	/** The sql example by id. */
+	/** The sql chooseLevel. */
     private static String sqlChooseLevel = "{call ChooseLevel(?)}";
     
     /**
@@ -14,7 +14,8 @@ public abstract class LorannDAO extends AbstractDAO{
      *
      * @param id
      *            the id
-     * @return the level's text by id
+     * @return level
+     * the level's text by id
      * @throws SQLException
      *             the SQL exception
      */

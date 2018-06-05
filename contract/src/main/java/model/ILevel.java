@@ -31,7 +31,7 @@ public interface ILevel {
 	/**
 	 * Gets the observables
 	 * 
-	 * @return the observable
+	 * @return observable
 	 */
 	Observable getObservable();
 	void setElementHasChanged();

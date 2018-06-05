@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * <h1>The Class BoulderDashBDDConnector.</h1>
+ * <h1>The Class LorannBDDConnector.</h1>
+ * 
+ * Establishes the connection between the program and the database.
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
@@ -34,16 +36,16 @@ final class LorannBDDConnector {
     private Statement                      statement;
 
     /**
-     * Instantiates a new boulder dash BDD connector.
+     * Instantiates a new Lorann BDD connector.
      */
     private LorannBDDConnector() {
         this.open();
     }
 
     /**
-     * Gets the single instance of BoulderDashBDDConnector.
+     * Gets the single instance of LorannBDDConnector.
      *
-     * @return single instance of BoulderDashBDDConnector
+     * @return single instance of LorannBDDConnector
      */
     public static LorannBDDConnector getInstance() {
         if (instance == null) {

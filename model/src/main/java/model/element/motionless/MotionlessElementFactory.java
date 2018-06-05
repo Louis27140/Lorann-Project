@@ -20,32 +20,53 @@ public abstract class MotionlessElementFactory {
 			verticalwall
 	};
 	
+	/**
+	 * Creates the cornerwall.
+	 * @return cornerwall
+	 */
 	public static MotionlessElement createCornerWall() {
 		return cornerwall;
 	}
 	
+	/**
+	 * Creates the floor.
+	 * @return floor
+	 */
 	public static MotionlessElement createFloor() {
 		return floor;
 	}
 	
+	/**
+	 * Creates the horizontal wall.
+	 * @return horizontalwall
+	 */
 	public static MotionlessElement createHorizontalWall() {
 		return horizontalwall;
 	}
 	
+	/**
+	 * Creates the opened door.
+	 * @return openeddoor
+	 */
 	public static MotionlessElement createOpenedDoor() {
 		return openeddoor;
 	}
 	
+	/**
+	 * Creates the vertical wall.
+	 * @return verticalwall
+	 */
 	public static MotionlessElement createVerticalWall() {
 		return verticalwall;
 	}
 	
 	/**
-     * Gets the good MotionlessElement from file symbol.
+     * Gets the right MotionlessElement from file symbol.
      *
      * @param fileSymbol
      *            the file symbol
-     * @return the from file symbol
+     * @return floor
+     * 		the floor from file symbol
      */
     public static MotionlessElement getFromFileSymbol(final char fileSymbol) {
         for (final MotionlessElement motionlessElement : motionlessElements) {

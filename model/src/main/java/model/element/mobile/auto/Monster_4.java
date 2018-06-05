@@ -7,7 +7,7 @@ import model.Sprite;
 public class Monster_4 extends Monster{
 private static Sprite sprite = new Sprite('B', "monster_4");
 	
-	public boolean goingUp = true;
+	public boolean goingUpLeft = true;
 
 	public Monster_4(ILevel level, int x, int y) {
 		super(sprite, level, x, y);
@@ -26,32 +26,34 @@ private static Sprite sprite = new Sprite('B', "monster_4");
 
 	@Override
 	public void move() {
-		if(this.goingUp) {
-			if(!this.goUp()) {
-				this.goDown();
-				goingUp = false;
+		if(this.goingUpLeft) {
+			if(!this.goUpLeft()) {
+				this.goDownRight();
+				goingUpLeft = false;
 			}
 		}
 		else {
-			if(!this.goDown()) {
-				this.goUp();
-				goingUp = true;
+			if(!this.goDownRight()) {
+				this.goUpLeft();
+				goingUpLeft = true;
 			}
 		}
 	}
 	
-	public boolean goUp() {
-		if(this.getLevel().getOnTheLevelXY(this.getX(), this.getY() - 1).getPermeability() != Permeability.BLOCKING) {
+	public boolean goUpLeft() {
+		if(this.getLevel().getOnTheLevelXY(this.getX() - 1, this.getY() - 1).getPermeability() != Permeability.BLOCKING) {
 			this.moveUp();
+			this.moveLeft();
 			return true;
 		}
 		return false;
 			
 	}
 	
-	public boolean goDown() {
-		if(this.getLevel().getOnTheLevelXY(this.getX(), this.getY() + 1).getPermeability() != Permeability.BLOCKING) {
+	public boolean goDownRight() {
+		if(this.getLevel().getOnTheLevelXY(this.getX() + 1, this.getY() + 1).getPermeability() != Permeability.BLOCKING) {
 			this.moveDown();
+			this.moveRight();
 			return true;
 		}
 		return false;

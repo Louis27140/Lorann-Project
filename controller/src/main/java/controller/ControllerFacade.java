@@ -28,7 +28,7 @@ public class ControllerFacade implements IController, IOrderPerformer {
     private KeyEvent stackOrder;
     
     /** The speed of refresh. */
-    private static int speed = 100;
+    private static int speed = 150;
 
     /**
      * Instantiates a new controller facade.
@@ -75,6 +75,22 @@ public class ControllerFacade implements IController, IOrderPerformer {
         			break;
         		case KeyEvent.VK_SPACE:
         			this.getModel().getMyCharacter().shoot();
+        			break;
+        		case KeyEvent.VK_SHIFT:
+        			this.getModel().getMyCharacter().moveUp();
+        			this.getModel().getMyCharacter().moveLeft();
+        			break;
+        		case KeyEvent.VK_NUMPAD1:
+        			this.getModel().getMyCharacter().moveUp();
+        			this.getModel().getMyCharacter().moveRight();
+        			break;
+        		case KeyEvent.VK_CONTROL:
+        			this.getModel().getMyCharacter().moveDown();
+        			this.getModel().getMyCharacter().moveLeft();
+        			break;
+        		case KeyEvent.VK_NUMPAD0:
+        			this.getModel().getMyCharacter().moveDown();
+        			this.getModel().getMyCharacter().moveRight();
         			break;
         		default:
         			this.getModel().getMyCharacter().doNothing();

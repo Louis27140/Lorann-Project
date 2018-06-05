@@ -13,14 +13,10 @@ import model.element.mobile.auto.Monster_1;
 import model.element.mobile.auto.Monster_4;
 import model.element.mobile.auto.Monster_2;
 import model.element.mobile.auto.Monster_3;
-
-<<<<<<< HEAD
-import model.element.mobile.collectible.Gate;
 import model.element.mobile.collectible.CrystalEnergy;
-=======
 import model.element.mobile.collectible.Door;
 import model.element.mobile.collectible.EnergyBall;
->>>>>>> master
+import model.element.mobile.collectible.Gate;
 import model.element.mobile.collectible.Purse;
 import model.element.motionless.MotionlessElementFactory;
 /**
@@ -130,7 +126,7 @@ public class Level extends Observable implements ILevel {
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case '8':
-						this.energyBall = new CrystalEnergy(x, y, this);
+						this.energyBall = new CrystalEnergy(x,y,this);
 						this.setOnTheLevelXY(x, y, MotionlessElementFactory.createFloor());
 						break;
 					case '9':

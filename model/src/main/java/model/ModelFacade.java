@@ -2,17 +2,14 @@ package model;
 
 import java.io.IOException;
 import java.sql.SQLException;
-<<<<<<< HEAD
+
 import model.element.mobile.Lorann;
 import model.element.mobile.auto.Monster_1;
-import model.element.mobile.collectible.Gate;
+
 import model.element.mobile.collectible.CrystalEnergy;
-=======
-import model.element.mobile.MyCharacter;
-import model.element.mobile.auto.Monster_1;
+
 import model.element.mobile.collectible.Door;
-import model.element.mobile.collectible.EnergyBall;
->>>>>>> master
+
 import model.element.mobile.collectible.Purse;
 
 /**

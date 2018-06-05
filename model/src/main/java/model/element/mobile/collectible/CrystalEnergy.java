@@ -7,12 +7,12 @@ import model.Permeability;
 import model.Sprite;
 import model.element.mobile.Mobile;
 
-public class EnergyBall extends Mobile {
+public class CrystalEnergy extends Mobile {
 
 	private static Sprite ballSprite = new Sprite('8', "crystal_ball");
 	private static Sprite collected = new Sprite('8', "floor");
 	
-	public EnergyBall(int x, int y, ILevel level) throws IOException {
+	public CrystalEnergy(int x, int y, ILevel level) throws IOException {
 		super(ballSprite, Permeability.COLLECTIBLE, level, x, y);
 		collected.loadImage();
 	}

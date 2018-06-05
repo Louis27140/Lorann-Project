@@ -7,12 +7,12 @@ import model.Permeability;
 import model.Sprite;
 import model.element.mobile.Mobile;
 
-public class Door extends Mobile {
+public class Gate extends Mobile {
 
 	private static Sprite opened = new Sprite('6', "gate_open");
 	private static Sprite closed = new Sprite('7', "gate_closed");
 	
-	public Door(int x, int y, ILevel level) throws IOException {
+	public Gate(int x, int y, ILevel level) throws IOException {
 		super(closed, Permeability.COLLECTIBLE, level, x, y);
 		opened.loadImage();
 	}

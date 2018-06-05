@@ -22,7 +22,7 @@ public class Launcher {
 
 		JFrame frame = new JFrame("Menu Lorann");
 		JLabel text = new JLabel("Made by Louis CHOCHOY , Thomas ISAAC ,");
-		JLabel text1 = new JLabel("Valentin CASEN and Adrien Lalisse");
+		JLabel text1 = new JLabel("Valentin CASEN and Adrien LALISSE");
 		
 		
 		JPanel panel = new JPanel();

@@ -27,7 +27,7 @@ public class ControllerFacade implements IController, IOrderPerformer {
     /** The order. */
     private KeyEvent stackOrder;
     
-    /** The speed of refresh. */
+    /** The refresh rate. */
     private static int speed = 150;
 
     /**
@@ -49,7 +49,8 @@ public class ControllerFacade implements IController, IOrderPerformer {
      *
      * @throws SQLException
      *             the SQL exception
-     * @throws InterruptedException 
+     * @throws InterruptedException
+     * @throws IOException
      */
     public void start() throws SQLException, InterruptedException, IOException {
         while(this.getModel().getMyCharacter().isAlive()) {

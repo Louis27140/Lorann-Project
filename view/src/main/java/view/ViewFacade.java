@@ -43,17 +43,28 @@ public class ViewFacade implements IView, KeyListener, Runnable {
     /** The Constant fullView. */
     private Rectangle fullView;
     
+    /** The purses. */
     private IMobile[] purses;
     
+    /** The monsters. */
     private IMobile[] monsters;
     
+    /** The energy ball. */
     private IMobile energyBall;
     
+    /** The door. */
     private IMobile door;
 
 	/**
      * Instantiates a new view facade.
-	 * @throws IOException 
+     * 
+     * @param level
+     * @param myCharacter
+     * @param purses
+     * @param monsters
+     * @param energyBall
+     * @param door
+     * @throws IOException
      */
     public ViewFacade(ILevel level, IMobile myCharacter, IMobile[] purses, IMobile[] monsters, IMobile energyBall, IMobile door) throws IOException {
         this.setLevel(level);
@@ -174,16 +185,22 @@ public class ViewFacade implements IView, KeyListener, Runnable {
 	}
 
 	/**
-     * Get the Level.
+     * Gets the Level.
+     * 
+     * @return level
      */
+
 	public ILevel getLevel() {
 		return this.level;
 	}
 
 	/**
      * Set the Level.
+     * 
+     * @param level
 	 * @throws IOException 
      */
+
 	public void setLevel(ILevel level) throws IOException {
 		this.level = level;
 		int y = 0;
@@ -196,42 +213,48 @@ public class ViewFacade implements IView, KeyListener, Runnable {
 	}
 
 	/**
-     * Get the Character.
+     * Gets the Character.
+     * @return myCharacter
      */
 	public IMobile getMyCharacter() {
 		return this.myCharacter;
 	}
 
 	/**
-     * Set the Character.
+     * Sets the Character.
+     * @param myCharacter
      */
 	public void setMyCharacter(IMobile myCharacter) {
 		this.myCharacter = myCharacter;
 	}
 
 	/**
-     * Get the OrderPerformer.
+     * Gets the OrderPerformer.
+     * @return orderPerformer
      */
 	public IOrderPerformer getOrderPerformer() {
 		return this.orderPerformer;
 	}
 
 	/**
-     * Set the OrderPerformer.
+     * Sets the OrderPerformer.
+     * @param orderPerformer
      */
 	public void setOrderPerformer(IOrderPerformer orderPerformer) {
 		this.orderPerformer = orderPerformer;
 	}
 
 	/**
-     * Get the full view.
+     * Gets the full view.
+     * @return fullView
      */
 	public Rectangle getFullView() {
 		return this.fullView;
 	}
 
 	/**
-     * Set the full view.
+     * Sets the full view.
+     * @param fullView
      */
 	public void setFullView(Rectangle fullView) {
 		this.fullView = fullView;

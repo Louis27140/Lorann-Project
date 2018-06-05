@@ -15,7 +15,7 @@ import javax.swing.JFrame;
  * As the BoardPanel is a private class, BoardPanel is a Facade.
  * </p>
  *
- * @author Anne-Emilie DIET
+ *
  * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 3.0
  * @see JFrame

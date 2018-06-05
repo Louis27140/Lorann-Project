@@ -8,7 +8,7 @@ import java.awt.Image;
  * A class can implement the ISquare interface when it wants to be show on a IBoard.
  * </p>
  *
- * @author Anne-Emilie DIET
+ *
  * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.1
  * @see Image

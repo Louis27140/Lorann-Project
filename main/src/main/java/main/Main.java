@@ -13,6 +13,7 @@ import view.ViewFacade;
  * <h1>The Class Main.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.0
  */
 public abstract class Main {
@@ -27,6 +28,7 @@ public abstract class Main {
      * @throws SQLException 
      */
     public static void main(final String[] args) throws InterruptedException, IOException, SQLException {
+
     	final Menu menu = new Menu();
     	while (menu.choix == false) {
 			Thread.sleep(10);

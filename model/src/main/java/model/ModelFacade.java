@@ -12,6 +12,7 @@ import model.element.mobile.collectible.Purse;
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Louis CHOCHOY, Thomas ISAAC, Valentin CASEN and Adrien LALISSE
  * @version 1.0
  */
 public final class ModelFacade implements IModel {
@@ -47,6 +48,18 @@ public final class ModelFacade implements IModel {
         for(int i = 0; i < monsters.length; i++) {
         	switch(this.getLevel().getMonsters()[i].getSprite().getConsoleImage()) {
 	        	case '4':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
+	        	case '9':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
+	        	case 'A':
+	        		monsters[i] = this.getLevel().getMonsters()[i];
+	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
+	        		break;
+	        	case 'B':
 	        		monsters[i] = this.getLevel().getMonsters()[i];
 	            	((MyCharacter)this.getMyCharacter()).addMonster(monsters[i]);
 	        		break;
